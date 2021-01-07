@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="contact.css">
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+</head>
+<body style="background-color: black;">
+  <div id="bgimage">
+  	<div class="container-fluid">
+  		<h1 class="text-center text-warning" id="text"> Contact us</h1>
+  	</div>
+  </div><br><br><br>
+  <div class="container text-center" ><br><br><br>
+  	<h3 class="text-white">HAVE ANY FEEDBACK OR REVIEW? <br>
+JUST CONTACT US!<br><br>
+  </div><br><br><br>
+  <div class="container-sm">
+  	<form onsubmit="return myfun()">
+  		<div class="form-group">
+  			<label for="user" class="text-white">Name</label><br>
+  			<input type="text" name="" id="user" value="" placeholder="enter your name" class="form-control">
+  			<span id="message"></span><br>
+  			<label for="mail" class="text-white">Email</label><br>
+  			<input type="email" name="" id="mail" value="" placeholder="user@email.com" class="form-control">
+  			<span id="write"></span><br>
+  			<label for="ums" class="text-white">Message</label><br>
+  			<textarea type="text" name="" id="msg" value="" placeholder="enter msg here" class="form-control"></textarea>
+  			<span id="meesg"></span><br><br>
+  			<button class="btn btn-outline-warning btn-lg" style="font-size: 30px; float: right;"> Submit</button>
+  		</div>
+  	</form><br><br>
+  	<br><br><br>
+  	<h1 class="text-center text-warning" style="font-size: 60px;"><i class="fa fa-phone" aria-hidden="true"></i></h1>
+  	<h4 class="text-white text-center">Phone: +12(818) 349 856</h4><br><br><br>
+  	<h1 class="text-center text-warning" style="font-size: 60px;"><i class="fa fa-envelope" aria-hidden="true"></i></h1>
+  	<h4 class="text-white text-center">spicyburger12@email.com</h4><br><br><br>
+  	  <div class="container text-center">
+          	<a href="#" class="text-center"><i class="fa fa-facebook" aria-hidden="true" id="icon"></i>
+            </a>
+            <a href="#" class="text-center"><i class="fa fa-instagram" aria-hidden="true" id="insta"></i>
+            </a>
+            <a href="#" class="text-center"><i class="fa fa-envelope" aria-hidden="true" id="env"></i></a>
+		    <br><br>
+           <ul class="text-center" id="display">
+           	<li><a href="web.html">Home</a></li>
+           	<li><a href="about.html">About us</a></li>
+           	<li><a href="#" class="text-warning">contact us</a></li>
+            </ul>
+         </div>   
+  </div>
+  <script>
+  	function myfun() {
+  		var correct_way=/^[A-za-z]+$/;
+  		var a=document.getElementById('user').value;
+        var b=document.getElementById('mail').value;
+        var c=document.getElementById('msg').value;
+  		if (a=="") {
+  			document.getElementById('message').innerHTML="**Enter username";
+  			return false;
+  		}
+  		if (a.length<3||a.length>20) {
+  			document.getElementById('message').innerHTML="**invalid username";
+  			return false;
+  		}
+  		if (a.match(correct_way)) 
+  			true;
+  			else{
+  				document.getElementById('message').innerHTML="**invalid username";
+  				return false;
+  			}
+  		
+  		if (b=="") {
+  		    document.getElementById('write').innerHTML="**email required";
+  			return false;
+  		}
+  		if (b.indexOf('@')<=0) {
+  			 document.getElementById('write').innerHTML="**IInvalid email";
+  			return false;
+  		}
+  		if((b.charAt(b.length-4)!='.')&&(b.charAt(b.length-3)!='.')){
+  			 document.getElementById('write').innerHTML="**Invalid email";
+  			return false;
+  		}
+  		// if(b.charAt(b.length-3)!='.'){
+  		// 	 document.getElementById('write').innerHTML="**invalid emaiil";
+  		// 	return false;
+  		// }
+  		if (c=="") {
+  			 document.getElementById('meesg').innerHTML="**enter message";
+  			return false;
+  		}
+  	}
+  </script>
+</body>
+</html>
